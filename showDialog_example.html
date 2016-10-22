@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<link type='text/css' rel='stylesheet' href='dialog.css'>
+<script src=showDialog.js'></script>
+</head>
+
+<body>
+<div id='alertBoxPositive' class='dialogContainer hiddenDiv'>
+	<div id='alert' class='alert bkgndGreen center'>
+		This is a positive alert.
+	</div>
+</div>
+<div id='alertBoxNegative' class='dialogContainer hiddenDiv'>
+	<div id='alert' class='alert bkgndRed center'>
+		This is a negative alert.
+	</div>
+</div>
+<div id='dialogBox' class='dialogContainer hiddenDiv'>
+	<div id='dialog' class='dialog bkgndDkGrey center'>
+		<div id='closeBox' onClick="showDialog('dialogBox','dialog');" class='dialogButton'>X</div>
+		This is a decision box.
+		<div id='buttonBar' class='bkgndDkGrey'>
+			<div onClick="showDialog('dialogBox','dialog');" class='dialogButton floatRight'>Okay</div>
+			<div onClick="showDialog('dialogBox','dialog');" class='dialogButton floatRight'>Cancel</div>
+		</div>
+	</div>
+</div>
+<p>click <span onClick="showDialog('dialogBox','dialog');" style='cursor:pointer; text-decoration: underline;'>here</span> to show the dialog</p>
+<p>click <span onClick="showDialog('alertBoxPositive','alert');" style='cursor:pointer; text-decoration: underline;'>here</span> to show the positive alert</p>
+<p>click <span onClick="showDialog('alertBoxNegative','alert');" style='cursor:pointer; text-decoration: underline;'>here</span> to show the negative alert</p>
+<!-- This is a delay script for alert boxes on page load -->
+<!-- <script type='text/javascript'>window.onload=showDialog(alertBoxPositive,alert);</script> -->
+</body>
+</html>
